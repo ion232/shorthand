@@ -1,6 +1,4 @@
-.DS_Store
 .develop
-
-# Added by cargo
-
-/target
+/dist/
+/target/
+/Cargo.lock
