@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 4px;
+  /* border-collapse: collapse; */
+  /* border: 10px solid black; Add border to the table */
+}
+
+tr {
+  padding: 0px; /* Add padding to give space around the input */
+  /* border: 0px solid black; */
+  margin: 0; /* Remove margin */
+}
+
+td {
+  padding: 0px; /* Add padding to give space around the input */
+  width: 50px; /* Set fixed width for the td */
+  height: 50px; /* Set fixed height for the td */
+  border: 0px solid black;
+  text-align: center;
+}
+
+td input {
+  width: 100%; /* Make the input fill the entire td */
+  height: 100%; /* Make the input fill the entire td */
+  border: none;
+  background: rgb(14, 109, 53);
+  text-align: center;
+  font-size: large;
+}
