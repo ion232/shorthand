@@ -1,1 +1,3 @@
 .develop
+./zig-out
+./zig-cache
