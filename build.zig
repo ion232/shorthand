@@ -7,6 +7,18 @@ pub fn build(b: *std.Build) void {
         .target = b.host,
     });
 
+    const raylib_dependency = b.dependency("raylib-zig", .{
+        .target = b.host,
+    });
+
+    const raylib = raylib_dependency.module("raylib");
+    const raygui = raylib_dependency.module("raygui");
+    const raylib_artifact = raylib_dependency.artifact("raylib");
+
+    exe.linkLibrary(raylib_artifact);
+    exe.root_module.addImport("raylib", raylib);
+    exe.root_module.addImport("raygui", raygui);
+
     b.installArtifact(exe);
 
     const run_exe = b.addRunArtifact(exe);
