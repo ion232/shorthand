@@ -3,7 +3,7 @@ const std = @import("std");
 pub fn build(b: *std.Build) void {
     const exe = b.addExecutable(.{
         .name = "shorthand",
-        .root_source_file = b.path("src/main.zig"),
+        .root_source_file = b.path("app/main.zig"),
         .target = b.host,
     });
 
@@ -23,6 +23,6 @@ pub fn build(b: *std.Build) void {
 
     const run_exe = b.addRunArtifact(exe);
 
-    const run_step = b.step("run", "Run the application");
+    const run_step = b.step("app", "Run the application");
     run_step.dependOn(&run_exe.step);
 }
